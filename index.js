@@ -40,10 +40,11 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(hammadde){
+const hammaddeNew=[...hammadde]
+return hammaddeNew
 }
-
+console.log(kopyala(orijinalTatlar))
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -55,11 +56,16 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
 
-
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+const cesit =[];
+function dizi25Cesitmi(cesit){
+cesit = cesit.length
+if(cesit===25){
+return true  
+}else {
+false
 }
-
+}
+console.log(dizi25Cesitmi(orijinalTatlar))
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -73,10 +79,12 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
   Örneğin: cesitEkle(orijinalTatlar, "Kakule") işlevi doğru çalıştığında ["Kakule", "Muz",..."Vanilya"] şeklinde dönmelidir
 */
 
-
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(tatlar, yeniTat){
+const tatlarEkli=[...tatlar]
+tatlarEkli.unshift(yeniTat)
+  return tatlarEkli
 }
+console.log(cesitEkle(orijinalTatlar,'Kakule'))
 
 
 /* Cörev 4:
@@ -92,10 +100,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(tatlar){
+const tatlarCıkar=[...tatlar]
+tatlarCıkar.pop()
+return tatlarCıkar
 }
-
+console.log(sonCesitiKaldir(orijinalTatlar))
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -108,10 +118,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(tatlar3,index){
+const tatlarCesit=tatlar3[index]
+return tatlarCesit
 }
-
+console.log(indekstekiCesitiGetir(orijinalTatlar, 2))
 
 /* Görev 6:
 
@@ -128,10 +139,13 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(tatlar4,cikar){
+const tatlarisimCikar= [...tatlar4]
+const cikarNerede=tatlarisimCikar.indexOf(cikar)
+tatlarisimCikar.splice(cikarNerede,1)
+return tatlarisimCikar
 }
-
+console.log(ismeGoreCesitCikar(orijinalTatlar,'Tarçın'))
 
 /* Görev 7:
 
